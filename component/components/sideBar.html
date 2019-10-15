@@ -1,0 +1,189 @@
+<div class="sidebar active">
+    <div class="top_title">
+        <a href="#">
+            <i class="fas fa-paw"></i>
+            <span>Music System</span>
+        </a>
+    </div>
+    <div class="profile">
+        <div class="profile_image">
+            <img src="../../src/img/img.webp">
+        </div>
+        <div class="profile_info">
+            <span>
+                Welcome,
+            </span>
+            <h2>
+                Kenny
+            </h2>
+        </div>
+    </div>
+    <div class="sidebar_menu">
+        <div class="menu_section">
+            <h3 class="mb-2">Admin</h3>
+            <ul>
+                <li class="openChild">
+                    <a href="#">
+                        <i class="fas fa-user-graduate"></i> Student
+                        <span>
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul class="child_menu">
+                        <li>
+                            <a href="../student/page_studentView.html">Student List</a>
+                        </li>
+                        <li>
+                            <a href="../student/page_studentRegister.html">Register Form</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="openChild">
+                    <a href="#">
+                        <i class="fas fa-list-alt"></i> Timetable
+                        <span>
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul class="child_menu">
+                        <li>
+                            <a href="../timetable/page_timetableSearch.html">Search Date</a>
+                        </li>
+                        <li>
+                            <a href="../timetable/page_timetableCurrent.html">Current Day </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="openChild">
+                    <a href="../attendance/page_attendanceTable.html">
+                        <i class="far fa-calendar-check"></i> Attendance
+                        <span>
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <!-- <ul class="child_menu">
+                        <li>
+                            <a>General Elements</a>
+                        </li>
+                        <li>
+                            <a>Media Gallery</a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li class="openChild">
+                    <a href="#">
+                        <i class="far fa-calendar-alt"></i> Event
+                        <span>
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul class="child_menu">
+                        <li>
+                            <a href="../event/page_eventList.html">Event List</a>
+                        </li>
+                        <li>
+                            <a href="../event/page_eventAdd.html">Event Add</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="openChild">
+                    <a href="#">
+                        <i class="fas fa-clipboard-list"></i> Lesson
+                        <span>
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul class="child_menu">
+                        <li>
+                            <a href="../lesson/page_lessonList.html">Lesson List</a>
+                        </li>
+                        <li>
+                            <a href="../lesson/page_lessonAdd.html">Lesson Add </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="openChild">
+                    <a href="#">
+                        <i class="far fa-list-alt"></i> Leave
+                        <span>
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul class="child_menu">
+                        <li>
+                            <a href="../leave/page_leave.html">Student</a>
+                        </li>
+                        <!-- <li>
+                            <a href="">Teacher</a>
+                        </li> -->
+                    </ul>
+                </li>
+                <li class="openChild">
+                    <a href="#">
+                        <i class="far fa-copy"></i> Report
+                        <span>
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul class="child_menu">
+                        <li>
+                            <a href="../report/page_reportList.html">Absent List </a>
+                        </li>
+                        <li>
+                            <a href="../report/page_leave.html">Leave List </a>
+                        </li>
+                        <li>
+                            <a href="../report/page_reportEvent.html">Event List </a>
+                        </li>
+                        <li>
+                            <a href="../report/page_reportMonthly.html">Monthly Report </a>
+                        </li>
+                        <li>
+                            <a href="../report/page_reportYearly.html">Yearly Report</a>
+                        </li>
+                        <li>
+                            <a href="../report/page_reportReplacement.html">Replacement Report</a>
+                        </li>
+                        <li>
+                            <a href="../report/page_reportPaid.html">Paid Report</a>
+                        </li>
+                        <li>
+                            <a href="../report/page_reportUnpaid.html">Unpaid Report</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="openChild">
+                    <a href="../login/page_login.html">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.openChild').click(function() {
+        var elemt = $(this).children();
+
+        if (elemt.hasClass("active")) {
+            elemt.removeClass("active");
+        } else {
+            $('.openChild').children().removeClass("active");
+            elemt.addClass('active');
+        }
+    })
+
+    $('.toggle').click(function() {
+        var side1 = $('.sidebar');
+        var side2 = $('.simple_sidebar');
+
+        if (side1.hasClass("active")) {
+            side1.removeClass("active");
+            side2.addClass("active");
+        } else {
+            side2.removeClass("active");
+            side1.addClass("active");
+        }
+    });
+</script>
